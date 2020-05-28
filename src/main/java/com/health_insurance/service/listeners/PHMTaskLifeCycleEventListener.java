@@ -1,4 +1,4 @@
-package com.health_insurance.service;
+package com.health_insurance.service.listeners;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,8 +12,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * Constructor
      */
     public PHMTaskLifeCycleEventListener() {
-        System.out.println("\n>>>>>>>>> PHMTaskLifeCycleEventListener created.\n");
-        LOG.info("\n>>>>>>>>> PHMTaskLifeCycleEventListener created.\n");
+        LOG.info("Registering PHMTaskLifeCycleEventListener.");
     }
 
     // ****************************/
@@ -24,7 +23,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskActivatedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") is about to be activated.");
     }
 
@@ -32,7 +31,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskActivatedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") has been activated.");
     }
 
@@ -44,7 +43,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskClaimedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") is about to be claimed.");
     }
 
@@ -52,7 +51,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskClaimedEvent(TaskEvent event) {
-        System.out.println(
+        LOG.info(
                 "Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId() + ") has been claimed.");
     }
 
@@ -60,7 +59,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskReleasedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") is about to be released.");
     }
 
@@ -68,7 +67,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskReleasedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") has been released.");
     }
 
@@ -76,7 +75,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskReassignedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") is about to be reassigned.");
     }
 
@@ -84,7 +83,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskReassignedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") has been reassigned.");
     }
 
@@ -92,7 +91,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskForwardedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") is about to be forwarded.");
     }
 
@@ -100,7 +99,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskForwardedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") has been forwarded.");
     }
 
@@ -108,7 +107,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskDelegatedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") is about to be delegated.");
     }
 
@@ -116,7 +115,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskDelegatedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") has been delegated.");
     }
 
@@ -124,7 +123,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskNominatedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") is about to be nominated.");
     }
 
@@ -132,7 +131,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskNominatedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") has been nominated.");
     }
 
@@ -144,7 +143,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskStartedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") is about to start.");
     }
 
@@ -152,7 +151,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskStartedEvent(TaskEvent event) {
-        System.out.println(
+        LOG.info(
                 "Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId() + ") has started.");
     }
 
@@ -160,7 +159,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskCompletedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") is about to complete.");
     }
 
@@ -168,7 +167,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskCompletedEvent(TaskEvent event) {
-        System.out.println(
+        LOG.info(
                 "Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId() + ") has completed.");
     }
 
@@ -176,7 +175,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskExitedEvent(TaskEvent event) {
-        System.out.println(
+        LOG.info(
                 "Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId() + ") is about to exit.");
     }
 
@@ -184,7 +183,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskExitedEvent(TaskEvent event) {
-        System.out.println(
+        LOG.info(
                 "Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId() + ") has exited.");
     }
 
@@ -192,7 +191,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskSuspendedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") is about to be suspended.");
     }
 
@@ -200,7 +199,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskSuspendedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") has been suspended.");
     }
 
@@ -208,7 +207,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskResumedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") is about to resume.");
     }
 
@@ -216,7 +215,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskResumedEvent(TaskEvent event) {
-        System.out.println(
+        LOG.info(
                 "Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId() + ") has resumed.");
     }
 
@@ -224,7 +223,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskStoppedEvent(TaskEvent event) {
-        System.out.println(
+        LOG.info(
                 "Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId() + ") is about stop.");
     }
 
@@ -232,7 +231,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskStoppedEvent(TaskEvent event) {
-        System.out.println(
+        LOG.info(
                 "Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId() + ") has stopped.");
     }
 
@@ -240,7 +239,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskSkippedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") is about to be skipped.");
     }
 
@@ -248,7 +247,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskSkippedEvent(TaskEvent event) {
-        System.out.println(
+        LOG.info(
                 "Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId() + ") has been skipped.");
     }
 
@@ -256,7 +255,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskFailedEvent(TaskEvent event) {
-        System.out.println(
+        LOG.info(
                 "Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId() + ") is about to fail.");
     }
 
@@ -264,7 +263,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskFailedEvent(TaskEvent event) {
-        System.out.println(
+        LOG.info(
                 "Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId() + ") has failed.");
     }
 
@@ -276,7 +275,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskNotificationEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") is about to be notified.");
     }
 
@@ -284,7 +283,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskNotificationEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") has been notified.");
     }
 
@@ -296,7 +295,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskUpdatedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") is about to be updated.");
     }
 
@@ -304,7 +303,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskUpdatedEvent(TaskEvent event) {
-        System.out.println(
+        LOG.info(
                 "Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId() + ") has been updated.");
     }
 
@@ -312,7 +311,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void beforeTaskAddedEvent(TaskEvent event) {
-        System.out.println("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
+        LOG.info("Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId()
                 + ") is about to be added.");
     }
 
@@ -320,7 +319,7 @@ public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener
      * @param event
      */
     public void afterTaskAddedEvent(TaskEvent event) {
-        System.out.println(
+        LOG.info(
                 "Human Task <<" + event.getTask().getName() + ">>-(" + event.getTask().getId() + ") has been added.");
     }
 
