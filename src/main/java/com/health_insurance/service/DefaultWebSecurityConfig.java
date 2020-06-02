@@ -34,14 +34,15 @@ public class DefaultWebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 
-        auth.inMemoryAuthentication().withUser("Robert").password("jbpm1!").roles("kie-server");
-        auth.inMemoryAuthentication().withUser("Marc").password("jbpm1!").roles("kie-server");
-        auth.inMemoryAuthentication().withUser("Patricia").password("jbpm1!").roles("kie-server");
-        auth.inMemoryAuthentication().withUser("Charlie").password("jbpm1!").roles("kie-server");
-        auth.inMemoryAuthentication().withUser("Matthew").password("jbpm1!").roles("kie-server");
-        auth.inMemoryAuthentication().withUser("Mary").password("jbpm1!").roles("kie-server");
-        auth.inMemoryAuthentication().withUser("Peter").password("jbpm1!").roles("kie-server");
-        auth.inMemoryAuthentication().withUser("wbadmin").password("wbadmin").roles("admin");
+        auth.inMemoryAuthentication().withUser("Robert").password("redhatpam1!").roles("kie-server");
+        auth.inMemoryAuthentication().withUser("Marc").password("redhatpam1!").roles("kie-server");
+        auth.inMemoryAuthentication().withUser("Patricia").password("redhatpam1!").roles("kie-server");
+        auth.inMemoryAuthentication().withUser("Charlie").password("redhatpam1!").roles("kie-server");
+        auth.inMemoryAuthentication().withUser("Matthew").password("redhatpam1!").roles("kie-server");
+        auth.inMemoryAuthentication().withUser("Mary").password("redhatpam1!").roles("kie-server");
+        auth.inMemoryAuthentication().withUser("Peter").password("redhatpam1!").roles("kie-server");
+        auth.inMemoryAuthentication().withUser("user").password("redhatpam1!").roles("kie-server");
+        auth.inMemoryAuthentication().withUser("pamAdmin").password("redhatpam1!").roles("admin");
         auth.inMemoryAuthentication().withUser("kieserver").password("kieserver1!").roles("kie-server");
     }
 
