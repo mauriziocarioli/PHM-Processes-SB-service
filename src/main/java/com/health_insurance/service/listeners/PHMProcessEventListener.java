@@ -9,14 +9,14 @@ import org.kie.api.event.process.*;
 
 @Component
 public class PHMProcessEventListener extends DefaultProcessEventListener {
-//    private static final Logger LOG = LogManager.getLogger(PHMProcessEventListener.class);
+    //private static final Logger LOG = LogManager.getLogger(PHMProcessEventListener.class);
     private static final Logger LOG = LoggerFactory.getLogger(PHMProcessEventListener.class);
 
     /**
      * Constructor
       */
      public PHMProcessEventListener() {
-         LOG.info("Registering PHMProcessEventListener.");
+         LOG.info("Registered PHMProcessEventListener.");
     }
 
     /**

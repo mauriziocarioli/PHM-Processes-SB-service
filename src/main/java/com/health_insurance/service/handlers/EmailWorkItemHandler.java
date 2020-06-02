@@ -26,7 +26,7 @@ public class EmailWorkItemHandler implements WorkItemHandler {
     private JavaMailSender javaMailSender;
 
     public EmailWorkItemHandler() {
-        LOG.info("Registering EmailWorkItemHandler.");
+        LOG.info("Registered EmailWorkItemHandler.");
         //System.out.println("\n==========>  Registering EmailWorkItemHandler.\n");
     }
 

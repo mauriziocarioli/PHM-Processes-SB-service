@@ -1,5 +1,7 @@
 package com.health_insurance.service.listeners;
 
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -7,12 +9,14 @@ import org.kie.api.task.*;
 
 @Component
 public class PHMTaskLifeCycleEventListener implements TaskLifeCycleEventListener {
-    private static final Logger LOG = LoggerFactory.getLogger(PHMTaskLifeCycleEventListener.class);
+    //private static final Logger LOG = LogManager.getLogger(PHMProcessEventListener.class);
+    private static final Logger LOG = LoggerFactory.getLogger(PHMProcessEventListener.class);
+
     /**
      * Constructor
      */
     public PHMTaskLifeCycleEventListener() {
-        LOG.info("Registering PHMTaskLifeCycleEventListener.");
+        LOG.info("Registered PHMTaskLifeCycleEventListener.");
     }
 
     // ****************************/
